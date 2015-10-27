@@ -30,12 +30,10 @@ public class User  implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-
 	private NotificationAddress defaultNotificationAddress;
 	private NotificationAddress defaultOnDemandEndpoint;
 	private String name;
-	private List<Role> privledges;
+	private List<Role> privileges;
 	private boolean supportsPublishOnDemand;
 	private String userId;
 
@@ -79,18 +77,14 @@ public class User  implements Serializable {
 		name = newVal;
 	}
 
-	public List<Role> getPrivledges(){
-		return privledges;
-	}
+        public List<Role> getPrivileges() {
+               return privileges;
+        }
 
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setPrivledges(List<Role> newVal){
-		privledges = newVal;
-	}
-
+        public void setPrivileges(List<Role> privileges) {
+                this.privileges = privileges;
+        }
+        
 	public boolean isSupportsPublishOnDemand(){
 		return supportsPublishOnDemand;
 	}
